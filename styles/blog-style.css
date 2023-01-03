@@ -1,0 +1,230 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    @font-face {
+        font-family: 'Heading18Regular';
+        src: url(/G2_Web/source/SVN-Gotham\ Regular.otf);
+    }
+    
+    @font-face {
+        font-family: 'Heading14Light';
+        src: url(/G2_Web/source/SVN-Gotham\ Light.otf);
+    }
+    /*-------------------body-------------------*/
+    
+    body {
+        font-size: 14px;
+        text-transform: none;
+        display: block;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    a {
+        color: #1C1C1C;
+        text-decoration: none;
+    }
+    /*-------------------animation-------------------*/
+    /*-------------------other_things-------------------*/
+    
+    .evo-blog-header {
+        background: url(/source/baner1.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: "SVN Gotham";
+    }
+    
+    .row {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    
+    .evo-blog-header .evo-blog-header-content {
+        padding: 20px 0 40px;
+        min-height: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 50px 40px;
+        flex-flow: column;
+        text-align: center;
+    }
+    
+    .evo-blog-header .evo-blog-header-content h1 {
+        font-size: 26px;
+        line-height: 28px;
+        margin: 0;
+        font-family: "SVN-Gotham";
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        color: #fff;
+    }
+    
+    .evo-blog-header .evo-blog-header-content .evo-blog-des {
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+    }
+    
+    h2,
+    .h2 {
+        color: #fff;
+        letter-spacing: .01em;
+        font-size: 2em;
+        line-height: 1.4;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .evo-blog-des {
+        font-family: "Roboto";
+    }
+    
+    .evo-blog-nav {
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    
+    .blog-page {
+        margin-top: 25px;
+    }
+    
+    .list-blog-page {
+        margin-top: 20px;
+    }
+    
+    section {
+        display: block;
+    }
+    
+    .list-blog-page .evo-list-blogs .blog-item:nth-child(3n+1) {
+        clear: left;
+        margin-bottom: 15px;
+    }
+    
+    .col-md-4.col-sm-4.col-xs-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        min-height: 1px;
+    }
+    
+    .blog-item {
+        overflow: hidden;
+    }
+    
+    .col-md-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    
+    article {
+        display: block;
+    }
+    
+    .blog-page .evo-list-blogs .blog-item a .evo-article-image {
+        position: relative;
+        overflow: hidden;
+        height: 150px;
+    }
+    
+    .blog-page .evo-list-blogs .blog-item a .evo-article-image img {
+        transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        width: auto;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+    .center-block {
+        display: block;
+    }
+    
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    img {
+        border: none;
+        vertical-align: middle;
+        max-width: 600%;
+    }
+    
+    .blog-page .evo-list-blogs .blog-item a h3 {
+        color: #1c1c1c;
+        font-size: 15px;
+        font-family: "SVN-Gotham";
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.6;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .line-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-height: 43px;
+        height: auto;
+        min-height: 43px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    h3 {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    
+    .blog-page .evo-list-blogs .blog-item a p {
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0.52px;
+        font-family: "SVN-Gotham";
+        margin-bottom: 30px;
+        color: #1c1c1c;
+        text-align: left;
+    }
+    
+    p {
+        margin: 15px 25px 15px 0;
+        display: block;
+    }
+    
+    .sotrang {
+        margin-top: 20px;
+    }
+    
+    .number-page {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .number {
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+        background-color: #D9D9D9;
+        color: #1C1C1C;
+    }
+    
+    .number:hover {
+        color: #ffc000;
+    }
