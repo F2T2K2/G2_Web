@@ -1,0 +1,264 @@
+/* PHẦN SEARCHBAR & LỌC */
+#search-container {
+    font-family: SVN-Gotham, sans-serif;
+    box-sizing: content-box;
+    font-size: 13px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 20px 10vw 40px 10vw;
+    background: #ffffff;
+}
+#search-container div{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #110f29 !important;
+    border: none;
+    padding: 1em 2em;
+    font-style: oblique;
+    font-family: SVN-Gotham, sans-serif;
+    outline: none;
+}
+
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: SVN-Gotham, sans-serif;
+    margin-top: 0.5em;
+}
+
+#title-box{
+    display: flex;
+    flex-direction: row;
+    
+}
+#buttons{
+    margin-top: 7px;
+    margin-bottom: 25px;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-bottom: 25px;
+}
+
+.bolocsp{
+    font-family: SVN-Gotham, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-left: 64em;
+}
+
+.phanloaisp{
+    font-family: SVN-Gotham, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-left: 3em;
+}
+
+.locsp{
+    float: right;
+    margin-right: 250px;
+}
+
+.boloc{
+    font-family: SVN-Gotham, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    border: 2px solid #111;
+    border-radius: 3em;
+    background-color: #fff;
+    color: #1c1c1c;
+    cursor: pointer;
+    min-width: 100px;
+    height: 30px;
+}
+
+.bolocsp-sx{
+    width: fit-content;
+    float: right;
+}
+
+.bolocsp-sx option{
+    font-family: SVN-Gotham, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    display: flex;
+    padding-top: 1.5em;
+}
+
+.boloc .luachon{
+    display: none;
+}
+
+
+.boloc-sx-thanhphan{
+    font-family: SVN-Gotham, sans-serif;
+    font-size: 14px;
+    font-weight: 450;
+    color: #000;
+    font-style: normal;
+    border-radius: 0;
+    justify-content: space-around;
+
+}
+
+.button-value {
+    border: 2px solid #111;
+    border-radius: 3em;
+    background-color: #fff;
+    color: #1c1c1c;
+    cursor: pointer;
+    min-width: 100px;
+    height: 30px;
+}
+
+button:hover {
+    color: #ffc000;
+    background-color: black;
+}
+
+/* PHẦN NỘI DUNG */
+@font-face {
+    font-family: Gotham;
+    src: url(/g2store/fonts/SVN-Gotham.ttf);
+}
+
+:root {
+    --black : #1C1C1C;
+    --white : #fff;
+    --orange : #ffc000;   
+}
+
+* {
+    font-family: 'SVN-Gotham', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none ;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 7rem; */
+}
+h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+}
+h1 a{
+    color: var(--black);
+}
+h2 {
+    font-size: 2.4rem;
+    color: var(--black);
+}
+h3 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: var(--black)
+}
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+h5 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #767676;
+}
+#section-best_seller, #section-gallery, #section-news {
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+#section-gallery{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.container-timkiem {
+    margin: 0 10vw;
+    display: block;
+    position: relative;
+}
+/* <!-- -------------checkbox------------- --> */
+.cap{
+    font-family: 'SVN-Gothem',sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px;
+    display: block;
+    position: relative;
+}
+.ct {
+    margin: 0px;
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+}
+.ct label {
+    margin: 10px 10px 10px 0;
+    padding: 1em 2em;
+    font-family: 'SVN-Gothem',sans-serif;
+    font-size: 16px;
+    display: flex;
+    width: 20%;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #1c1c1c8f;
+    color: #f2f2f2;
+}
+.ct input {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid #1C1C1C;
+    border-radius: 15px;
+    opacity: 1;
+    position:relative;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px; 
+    font-family: 'SVN-Gothem',sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+#list .kq{
+    width: 25vw;
+    margin: 10px 6px 20px 6px;
+    text-align: center;
+    padding: 5px 5px;
+    border: 0.5px solid #efefef;
+}
+#list h4 sup{
+    font-size: 0.7rem;
+    display: inline-block;
+    position: absolute;
+}
+#list img {
+    max-width: 100%;
+}
+
+
