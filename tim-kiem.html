@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tìm kiếm | G2 Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/G2_Web/javascript.js"></script>
+    <link rel="stylesheet" href="/G2_Web/styles/tim-kiem-style.css">
+	<link rel="stylesheet" href="/G2_Web/styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+	<link rel="website icon" type="png" href="/G2_Web/source/G2_logo.png">
+</head>
+<body>
+<!------------HEADER------------->
+
+<header>
+    <div class="container">
+        <div class="hotline">
+            <span>HOTLINE:</span>
+            <a href="tel:0987654321">0987654321</a>
+        </div>
+        <div class="header-logo">
+            <a href="/G2_Web/trang-chu.html">
+				<img src="source/G2_logo.png" alt="">
+			</a>
+        </div>
+        <div class="header-left">
+			<ul>
+				<li>
+					<a href="/G2_Web/dang-nhap.html" title="Tài khoản">
+						Tài khoản
+						<span 
+						class="material-symbols-sharp">
+						person </span> 
+					</a>
+					<ul>
+						<li>
+							<a href="/G2_Web/dang-nhap.html">Đăng nhập</a>
+						</li>
+						<li>
+							<a href="/G2_Web/dang-ky.html">Đăng ký</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/G2_Web/gio-hang.html" title="Giỏ hàng">Giỏ hàng 
+						<span class="material-symbols-outlined">
+						shopping_cart </span>
+					</a>
+					<ul>
+						<li>
+							<a href="">GIỎ HÀNG CỦA BẠN ĐANG TRỐNG</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/G2_Web/tim-kiem.html" title="Mở trang tìm kiếm sản phẩm">
+						<span class="material-symbols-outlined search-icon">
+							search
+						</span>
+					</a>
+				</li>
+			</ul>
+            
+			
+			
+        </div>
+    </div>
+    <nav class="container_nav">
+        <ul>
+            <li>
+				<a href="/G2_Web/trang-chu.html" title="Trang chủ">Trang chủ</a>
+			</li>
+            <li>
+				<a href="/G2_Web/tim-kiem.html" class="nav-link" title="Chelsea boots">Chelsea boots 
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/glv.html">GLV</a>
+					</li>
+					<li>
+						<a href="/G2_Web/manza.html">MANZA</a>
+					</li>
+					<li>
+						<a href="/G2_Web/luca.html">LUCA</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Combat boots">Combat boots
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/combat-chunky.html">ĐẾ CHUNKY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/363.html">363</a>
+					</li>
+					<li>
+						<a href="/G2_Web/582.html">582</a>
+					</li>
+					<li>
+						<a href="/G2_Web/36.html">36</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Office shoes">Office shoes
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/loafer.html">LOAFER</a>
+					</li>
+					<li>
+						<a href="/G2_Web/chunky.html">CHUNKY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/derby.html">DERBY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/new-sole.html">NEW SOLE</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Sneaker">Sneaker</a>
+            </li>
+			<li>
+                <a href="/G2_Web/cua-hang.html" title="Cửa hàng">Cửa hàng</a>
+            </li>
+			<li>
+                <a href="/G2_Web/blog.html" title="Blog">Blog</a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<!------------CONTENT------------->
+
+<section class="tim-kiem">
+    <div class="container-timkiem">
+        <div id="search-container">
+            <input type="search" id="search-input" placeholder="Tìm sản phẩm ở đây.." />
+            <button id="search">Tìm Kiếm</button>
+        </div>
+
+        <!-- -------------checkbox------------- -->
+        <div class="cap">Phân loại sản phẩm</div>
+        <div class="ct">
+            <label><input onchange="chonGiay()" type="checkbox" class="danhmucgiay" value="Chelsea boots" >Chelsea boots</label>
+            <label><input onchange="chonGiay()" type="checkbox" class="danhmucgiay" value="Combat boots" >Combat boots</label>
+            <label><input onchange="chonGiay()" type="checkbox" class="danhmucgiay" value="Office shoes" >Office shoes</label>
+            <label><input onchange="chonGiay()" type="checkbox" class="danhmucgiay" value="Sneaker" >Sneaker</label>
+        </div>
+
+        <!-- -------------list sản phẩm java------------- -->
+        <div id="list">
+
+        </div>
+       
+    <!-- -------------java------------- -->
+    <!-- -------------định nghĩa dữ liệu------------- -->
+    <script>
+        var arrGiay =[
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/GLV.jpg',
+                ten: 'GLV',
+                gia: 699,
+                danhmucgiay: 'Chelsea boots',
+                
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Manza.jpg',
+                ten: 'Manza',
+                gia: 699,
+                danhmucgiay: 'Chelsea boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Luca.png',
+                ten: 'Luca',
+                gia: 789,
+                danhmucgiay: 'Chelsea boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Combat boots đế chunky.jpg',
+                ten: 'Đế chunky',
+                gia: 799,
+                danhmucgiay: 'Combat boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/363.jpg',
+                ten: '363',
+                gia: 599,
+                danhmucgiay: 'Combat boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Chunky 582.jpg',
+                ten: '582',
+                gia: 599,
+                danhmucgiay: 'Combat boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/36.jpg',
+                ten: '36',
+                gia: 599,
+                danhmucgiay: 'Combat boots',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Loafer.jpg',
+                ten: 'Loafer',
+                gia: 589,
+                danhmucgiay: 'Office shoes',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Chunky Derby.jpg',
+                ten: 'Chunky Derby',
+                gia: 579,
+                danhmucgiay: 'Office shoes',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Derby.jpg',
+                ten: 'Derby',
+                gia: 569,
+                danhmucgiay: 'Office shoes',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Derby đế mới.jpg',
+                ten: 'Derby new sole',
+                gia: 589.000,
+                danhmucgiay: 'Office shoes',
+            },
+            {
+                anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Sneaker.png',
+                ten: 'Sneaker',
+                gia: 555.000,
+                danhmucgiay: 'Sneaker'
+            }
+        ]
+    </script>
+    <!-- -------------định nghĩa hàm------------- -->
+    <script>
+    function hienGiay(danhmucchon_arr=[]){
+        var list = document.getElementById("list");
+        list.innerHTML='';
+        for(i=0; i<arrGiay.length; i++){
+            danhmucGIAY=arrGiay[i].danhmucgiay;
+            giaGiay=arrGiay[i].gia;
+            tenGIAY=arrGiay[i].ten;
+            anhGIAY=arrGiay[i].anh;
+                // lọc nè
+            if (danhmucchon_arr.length>0){
+                if (danhmucchon_arr.includes(danhmucGIAY) == false) continue;
+            }
+            
+            list.innerHTML+=`
+                <div class="kq">
+                    <img src = "${anhGIAY}">
+                    <h5> ${danhmucGIAY}</h5>
+                    <h2> ${tenGIAY}</h2>
+                    <h4> ${giaGiay}.000 <sup> vnđ </sup></h4>
+                    
+                </div>
+            `;
+        }
+    }
+    hienGiay();
+    </script>
+
+    <script>
+        function chonGiay(){
+            // người dùng chọn loại giày
+            var arr1 = document.getElementsByClassName("danhmucgiay");
+            
+            var danhmucchon_arr=[];
+            for (i=0; i<arr1.length; i++){
+                if (arr1[i].checked == true) danhmucchon_arr.push( arr1[i].value );
+            }
+        
+            hienGiay(danhmucchon_arr);
+        }
+    </script>
+</section>
+
+<!------------FOOTER------------->
+
+<footer class="bg-footer">
+	<div class="site-footer">
+		<div class="container_footer">
+			<div class="footer-inner">
+				<div class="row">
+					<div class="footer-column">
+						<div style="justify-content: center; margin: auto;">
+							<a href="/G2_Web/trang-chu.html", style="margin: 80px;">
+								<img src="source/G2_logo.png" style="max-width: 88px; margin: auto;">
+							</a>
+						</div>
+						<ul class="first-column">
+							<li>
+								<a href="/G2_Web/cua-hang.html">
+									<span class="material-symbols-sharp">location_on</span>
+									Hệ thống cửa hàng | G2 Store
+								</a>
+							</li>
+							<li>
+								<a href="tel:0987654321">
+									<span class="material-symbols-outlined">phone_forwarded</span>
+									0987654321
+								</a>
+							</li>
+							<li>
+								<a title="Liên hệ G2 Store qua Email" target="_blank" href="https://mail.google.com/mail/#inbox?compose=VpCqJWHTdmnnjKwhtgBjrvCFwNwPbzcWSvMXFRLGqczscGcRkfXCHWVlMZxffDkTpNBFvPq">
+									<span class="material-symbols-outlined">mail</span>
+									giaynamg2@gmail.com
+								</a>
+							</li>
+							<li>
+								@ Copyright 2022 - <a href="/G2_Web/trang-chu.html" title="G2 Store" style="text-decoration: underline;">Design by G2store</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/giaydag2" title="Fanpage G2 Store" target="_blank">
+									<img src="source/social_network.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">HƯỚNG DẪN</div>
+						<ul class="list-footer">
+							<li>
+								<a href="/G2_Web/none.html">Hướng dẫn mua hàng</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Giao nhận và thanh toán</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Đổi trả bảo hành</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Đăng ký thành viên</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Tra cứu đơn hàng</a>
+							</li>
+						</ul>
+						<a class="approved">
+							<img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/bct.png?1671629752759" style="max-width: 70%">
+						</a>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">CHÍNH SÁCH</div>
+						<ul class="list-footer">
+							<li>
+								<a href="/G2_Web/none.html">Chính sách đổi hàng</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách bảo hành</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách thanh toán</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách bảo mật</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Hệ thống tích điểm</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Hình thức vận chuyển</a>
+							</li>
+		
+						</ul>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">NHẬN KHUYẾN MÃI</div>
+						<p>Để lại Email của bạn</p>
+						<div class="email-footer">
+							<span>
+								<input style="height: 33px; padding-left: 8px; outline: none; border: none;
+							font-size: 12px; background-color: #FFFFFF ;" 
+							type="text" placeholder="Nhập Email của bạn"> 
+							</span>
+							<button href="#" class="mail-btn">ẤN GỬI</button>
+							<div style="font-family: sans-serif; font-style: italic; 
+								font-size: 10px; position: absolute; display: none;">
+								Đã gửi Email, vui lòng đợi xác nhận!
+							</div>
+						</div>
+						<div style="padding-bottom: 15px; border-bottom: 0.1px solid #BABABA;
+						font-weight: 300;">PHƯƠNG THỨC THANH TOÁN</div>
+						<img src="/G2_Web/source/image 5.png" style="margin-top: 26px;">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+</footer>
+
+</body>
+</html>
