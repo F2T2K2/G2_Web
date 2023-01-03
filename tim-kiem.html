@@ -170,6 +170,7 @@
     <script>
         var arrGiay =[
             {
+                link: '/G2_Web/glv.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/GLV.jpg',
                 ten: 'GLV',
                 gia: 699,
@@ -177,66 +178,77 @@
                 
             },
             {
+                link: '/G2_Web/manza.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Manza.jpg',
                 ten: 'Manza',
                 gia: 699,
                 danhmucgiay: 'Chelsea boots',
             },
             {
+                link: '/G2_Web/luca.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Luca.png',
                 ten: 'Luca',
                 gia: 789,
                 danhmucgiay: 'Chelsea boots',
             },
             {
+                link: '/G2_Web/de-chunky.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Combat boots đế chunky.jpg',
                 ten: 'Đế chunky',
                 gia: 799,
                 danhmucgiay: 'Combat boots',
             },
             {
+                link: '/G2_Web/363.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/363.jpg',
                 ten: '363',
                 gia: 599,
                 danhmucgiay: 'Combat boots',
             },
             {
+                link: '/G2_Web/582.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Chunky 582.jpg',
                 ten: '582',
                 gia: 599,
                 danhmucgiay: 'Combat boots',
             },
             {
+                link: '/G2_Web/none.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/36.jpg',
                 ten: '36',
                 gia: 599,
                 danhmucgiay: 'Combat boots',
             },
             {
+                link: '/G2_Web/loafer.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Loafer.jpg',
                 ten: 'Loafer',
                 gia: 589,
                 danhmucgiay: 'Office shoes',
             },
             {
+                link: '/G2_Web/none.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Chunky Derby.jpg',
                 ten: 'Chunky Derby',
                 gia: 579,
                 danhmucgiay: 'Office shoes',
             },
             {
+                link: '/G2_Web/none.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Derby.jpg',
                 ten: 'Derby',
                 gia: 569,
                 danhmucgiay: 'Office shoes',
             },
             {
+                link: '/G2_Web/none.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Derby đế mới.jpg',
                 ten: 'Derby new sole',
                 gia: 589.000,
                 danhmucgiay: 'Office shoes',
             },
             {
+                link: '/G2_Web/sneaker.html',
                 anh: '/G2_Web/source/một vài thứ maybe dùng/ảnh bìa sản phẩm/Sneaker.png',
                 ten: 'Sneaker',
                 gia: 555.000,
@@ -254,19 +266,21 @@
             giaGiay=arrGiay[i].gia;
             tenGIAY=arrGiay[i].ten;
             anhGIAY=arrGiay[i].anh;
+            link=arrGiay[i].link;
                 // lọc nè
             if (danhmucchon_arr.length>0){
                 if (danhmucchon_arr.includes(danhmucGIAY) == false) continue;
             }
             
             list.innerHTML+=`
-                <div class="kq">
-                    <img src = "${anhGIAY}">
-                    <h5> ${danhmucGIAY}</h5>
-                    <h2> ${tenGIAY}</h2>
-                    <h4> ${giaGiay}.000 <sup> vnđ </sup></h4>
-                    
-                </div>
+                <a href="${link}" title="${tenGIAY}">
+                    <div class="kq">
+                        <img src = "${anhGIAY}">
+                        <h5> ${danhmucGIAY}</h5>
+                        <h2> ${tenGIAY}</h2>
+                        <h4> ${giaGiay}.000 <sup> vnđ </sup></h4>   
+                    </div>
+                </a>
             `;
         }
     }
