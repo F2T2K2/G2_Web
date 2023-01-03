@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Thanh toán đơn hàng | G2 Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/G2_Web/javascript.js"></script>
+    <link rel="stylesheet" href="/G2_Web/styles/thanh-toan-style.css">
+	<link rel="stylesheet" href="/G2_Web/styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+	<link rel="website icon" type="png" href="/G2_Web/source/G2_logo.png">
+</head>
+<body>
+<!------------HEADER------------->
+
+<header>
+    <div class="container">
+        <div class="hotline">
+            <span>HOTLINE:</span>
+            <a href="tel:0987654321">0987654321</a>
+        </div>
+        <div class="header-logo">
+            <a href="/G2_Web/trang-chu.html">
+				<img src="source/G2_logo.png" alt="">
+			</a>
+        </div>
+        <div class="header-left">
+			<ul>
+				<li>
+					<a href="/G2_Web/dang-nhap.html" title="Tài khoản">
+						Tài khoản
+						<span 
+						class="material-symbols-sharp">
+						person </span> 
+					</a>
+					<ul>
+						<li>
+							<a href="/G2_Web/dang-nhap.html">Đăng nhập</a>
+						</li>
+						<li>
+							<a href="/G2_Web/dang-ky.html">Đăng ký</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/G2_Web/gio-hang.html" title="Giỏ hàng">Giỏ hàng 
+						<span class="material-symbols-outlined">
+						shopping_cart </span>
+					</a>
+					<ul>
+						<li>
+							<a href="">GIỎ HÀNG CỦA BẠN ĐANG TRỐNG</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="/G2_Web/tim-kiem.html" title="Mở trang tìm kiếm sản phẩm">
+						<span class="material-symbols-outlined search-icon">
+							search
+						</span>
+					</a>
+				</li>
+			</ul>
+            
+			
+			
+        </div>
+    </div>
+    <nav class="container_nav">
+        <ul>
+            <li>
+				<a href="/G2_Web/trang-chu.html" title="Trang chủ">Trang chủ</a>
+			</li>
+            <li>
+				<a href="/G2_Web/tim-kiem.html" class="nav-link" title="Chelsea boots">Chelsea boots 
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/glv.html">GLV</a>
+					</li>
+					<li>
+						<a href="/G2_Web/manza.html">MANZA</a>
+					</li>
+					<li>
+						<a href="/G2_Web/luca.html">LUCA</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Combat boots">Combat boots
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/combat-chunky.html">ĐẾ CHUNKY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/363.html">363</a>
+					</li>
+					<li>
+						<a href="/G2_Web/582.html">582</a>
+					</li>
+					<li>
+						<a href="/G2_Web/36.html">36</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Office shoes">Office shoes
+					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+				</a>
+				<ul>
+					<li>
+						<a href="/G2_Web/loafer.html">LOAFER</a>
+					</li>
+					<li>
+						<a href="/G2_Web/chunky.html">CHUNKY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/derby.html">DERBY</a>
+					</li>
+					<li>
+						<a href="/G2_Web/new-sole.html">NEW SOLE</a>
+					</li>
+				</ul>
+            </li>
+            <li>
+                <a href="/G2_Web/tim-kiem.html" title="Sneaker">Sneaker</a>
+            </li>
+			<li>
+                <a href="/G2_Web/cua-hang.html" title="Cửa hàng">Cửa hàng</a>
+            </li>
+			<li>
+                <a href="/G2_Web/blog.html" title="Blog">Blog</a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<!------------CONTENT------------->
+<section class="thanh-toan">
+<div id="payment-container">
+    <div id="payment__content">
+        <!-- Col-1 -->
+        <div id="customer-info">
+            <div id="title">Thông tin nhận hàng</div>
+            <select name="saved-add" id="saved-add">
+                <option class="hidden-text" value="" selected>Chọn địa chỉ đã lưu</option>
+                <option class="dashed-line">Vị trí hiện tại của bạn</option>
+            </select>
+            <input class="input__info" type="text" placeholder="Email" value="">
+            <input class="input__info" type="text" placeholder="Họ và tên" value="">
+            <input class="input__info" type="text" placeholder="Số điện thoại" value="">
+            <input class="input__info" type="text" placeholder="Địa chỉ" value="">
+            <select class="selection" name="city" id="city">
+                <option class="hidden-text" value="" selected>Chọn Tỉnh/Thành</option>           
+            </select>
+            <select class="selection" name="district" id="district">
+                <option class="hidden-text" value="" selected>Chọn Quận/Huyện</option>
+            </select>
+            <select class="selection" name="ward" id="ward">
+                <option class="hidden-text" value="" selected>Chọn Phường/Xã</option>
+            </select>
+            <input class="note" type="text" placeholder="Ghi chú (tùy chọn)" value=""></input>
+        </div>
+        <!-- Col-2 -->
+        <div id="method-delivery">
+            <div id="title">Thanh toán</div>
+            <div class="method-box">
+                <input id="option-one" name="radio" value="one" type="radio"> 
+                <label for="option-one"> <span></span>Thẻ quốc tế (Visa, Master, JCB, UnionPay)</label> 
+            </div> 
+            <div class="method-box">
+                <input id="option-two" name="radio" value="two" type="radio"> 
+                <label for="option-two"> <span></span>Thẻ ngân hàng nội địa (ATM), Mobile Banking</label> 
+            </div>
+            <div  class="method-box">
+                <input id="option-three" name="radio" value="three" type="radio"> 
+                <label for="option-three"> <span></span>Ví điện tử</label> 
+            </div>
+            <div  class="method-box">
+                <input id="option-four" name="radio" value="four" type="radio"> 
+                <label for="option-four"> <span></span>Chuyển khoản qua ngân hàng</label> 
+            </div>
+            <div class="method-box">
+                <input id="option-five" name="radio" value="five" type="radio"> 
+                <label for="option-five"> <span></span>Thanh toán khi nhận hàng (COD)</label> 
+            </div>
+            <br>
+            <br>
+            <div id="sidebar-container">
+                <div id="title">Vận chuyển</div>
+                <div class="method-box">
+                    <input id="option-1" name="radioo" value="1" type="radio"> 
+                    <label for="option-1"> <span></span>Chuyển phát nhanh</label> 
+                </div> 
+                <div class="method-box">
+                    <input id="option-2" name="radio0" value="2" type="radio"> 
+                    <label for="option-2"> <span></span>Hỏa tốc</label> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Col-3 -->
+    <div id="box-sidebar__os">
+    <div id="order-summary__sidebar">
+        <aside class="sidebar sidebar--disabled">
+            <div class="sidebar__content">
+        <div id="title">Đơn hàng</div>
+        <div class="order-summary">
+            <div class="order-summary__sections">
+                <div class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable">
+                    <table class="product-table">
+                        <tbody>
+                            <tr class="product">
+                                <td class="product__image">
+                                    <div class="product-thumbnail">
+                                        <div class="product-thumbnail__wrapper">
+                                            <img src="./im-giày/the w-thanh-toan.jpg" alt="the w" class="product-thumbnail__image">
+                                        </div>
+                                        <span class="product-thumbnail__quantity">1</span>
+                                    </div>
+                                </td>
+                                <th class="product__description">
+                                    <span class="product__description__name">THE W</span>
+                                    <span class="product__description__property">40 / BLACK</span>
+                                </th>
+                                <td class="product__price">799.000₫</td>
+                            </tr>
+                            
+                            <tr class="product">
+                                <td class="product__image">
+                                    <div class="product-thumbnail">
+                                        <div class="product-thumbnail__wrapper">
+                                            <img src="./im-giày/luca-thanh-toan.png" alt="luca" class="product-thumbnail__image">
+                                        </div>
+                                        <span class="product-thumbnail__quantity">1</span>
+                                    </div>
+                                </td>
+                                <th class="product__description">
+                                    <span class="product__description__name">LUCA</span>
+                                    <span class="product__description__property">39 / BLACK</span>
+                                </th>
+                                <td class="product__price">789.000₫</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="sale-code">
+                            <input class="code-box" type="text" placeholder="Nhập mã giảm giá">
+                            <button class="apply-code">ÁP DỤNG</button>
+                    </div>
+
+                    </div>
+                        <div class="order-summary__section order-summary__section--total-lines">
+                            <table class="total-line-table">
+                                <caption class="visually-hidden">Tổng giá trị</caption>
+                                <thead>
+                                    <tr>
+                                        <td><span class="visually-hidden">Mô tả</span></td>
+                                        <td><span class="visually-hidden">Giá tiền</span></td>
+                                    </tr>
+                                </thead>
+                                <tbody class="total-line-table__tbody">
+                                    <tr class="total-line total-line--subtotal">
+                                        <th class="total-line__name">Tạm tính</th>
+                                        <td class="total-line__price">1.588.000₫</td>
+                                    </tr>
+                                            
+                                    <tr class="total-line total-line--shipping-fee">
+                                        <th class="total-line__name">Phí vận chuyển</th>
+                                        <td class="total-line__price">40.000₫</td>
+                                    </tr>
+                                </tbody>
+                        
+                                <tfoot class="total-line-table__footer">
+                                    <tr class="total-line payment-due">
+                                        <th class="total-line__name">
+                                            <span class="payment-due__label-total">Tổng cộng</span>
+                                        </th>
+                                    <td class="total-line__price">
+                                        <span class="payment-due__price">1.628.000₫</span>
+                                    </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="confirm-btn">
+                    <a class="dialog-btn" href="#confirm-dialog">Mua hàng</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+    </div>
+
+    <!-- modal "mua hàng thành công" -->
+    <div class="dialog overlay" id="confirm-dialog">
+        <div class="dialog-body">
+            <p class="dialog-content">mua hàng thành công!</p>
+            <div class="dialog-box">
+                <div class="button-back-box">
+                    <a class="button-back" href="/G2_Web/trang-chu.html">Trang chủ</a>
+                </div>
+                <div class="button-exit-box">
+                    <a class="button-exit" href="/G2_Web/gio-hang.html">Giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT DANH SÁCH TỈNH THÀNH TOÀN QUỐC -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+        var citis=document.getElementById("city");
+        var districts=document.getElementById("district");
+        var wards=document.getElementById("ward");
+        var Parameter={
+            url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
+            method: "GET", 
+            responseType: "application/json", 
+        };
+        var promise=axios(Parameter);
+        promise.then(function (result){
+                renderCity(result.data);
+        });
+        function renderCity(data){
+            for (const x of data){
+                citis.options[citis.options.length] = new Option(x.Name, x.Id);
+            }
+            citis.onchange = function () {
+                district.length = 1;
+                ward.length = 1;
+                if(this.value != ""){
+                    const result = data.filter(n => n.Id === this.value);
+                    for(const k of result[0].Districts){
+                        district.options[district.options.length] = new Option(k.Name, k.Id);
+                    }
+                }
+            };
+            district.onchange = function () {
+                ward.length = 1;
+                const dataCity = data.filter((n) => n.Id === citis.value);
+                if (this.value != "") {
+                    const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+                    for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                    }
+                }
+            };
+        }
+    </script>
+
+</div>
+</section>
+
+<!------------FOOTER------------->
+
+<footer class="bg-footer">
+	<div class="site-footer">
+		<div class="container_footer">
+			<div class="footer-inner">
+				<div class="row">
+					<div class="footer-column">
+						<div style="justify-content: center; margin: auto;">
+							<a href="/G2_Web/trang-chu.html", style="margin: 80px;">
+								<img src="source/G2_logo.png" style="max-width: 88px; margin: auto;">
+							</a>
+						</div>
+						<ul class="first-column">
+							<li>
+								<a href="/G2_Web/cua-hang.html">
+									<span class="material-symbols-sharp">location_on</span>
+									Hệ thống cửa hàng | G2 Store
+								</a>
+							</li>
+							<li>
+								<a href="tel:0987654321">
+									<span class="material-symbols-outlined">phone_forwarded</span>
+									0987654321
+								</a>
+							</li>
+							<li>
+								<a title="Liên hệ G2 Store qua Email" target="_blank" href="https://mail.google.com/mail/#inbox?compose=VpCqJWHTdmnnjKwhtgBjrvCFwNwPbzcWSvMXFRLGqczscGcRkfXCHWVlMZxffDkTpNBFvPq">
+									<span class="material-symbols-outlined">mail</span>
+									giaynamg2@gmail.com
+								</a>
+							</li>
+							<li>
+								@ Copyright 2022 - <a href="/G2_Web/trang-chu.html" title="G2 Store" style="text-decoration: underline;">Design by G2store</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/giaydag2" title="Fanpage G2 Store" target="_blank">
+									<img src="source/social_network.png">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">HƯỚNG DẪN</div>
+						<ul class="list-footer">
+							<li>
+								<a href="/G2_Web/none.html">Hướng dẫn mua hàng</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Giao nhận và thanh toán</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Đổi trả bảo hành</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Đăng ký thành viên</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Tra cứu đơn hàng</a>
+							</li>
+						</ul>
+						<a class="approved">
+							<img src="https://bizweb.dktcdn.net/100/292/624/themes/758446/assets/bct.png?1671629752759" style="max-width: 70%">
+						</a>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">CHÍNH SÁCH</div>
+						<ul class="list-footer">
+							<li>
+								<a href="/G2_Web/none.html">Chính sách đổi hàng</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách bảo hành</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách thanh toán</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Chính sách bảo mật</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Hệ thống tích điểm</a>
+							</li>
+							<li>
+								<a href="/G2_Web/none.html">Hình thức vận chuyển</a>
+							</li>
+		
+						</ul>
+					</div>
+					<div class="footer-column">
+						<div class="top-footer">NHẬN KHUYẾN MÃI</div>
+						<p>Để lại Email của bạn</p>
+						<div class="email-footer">
+							<span>
+								<input style="height: 33px; padding-left: 8px; outline: none; border: none;
+							font-size: 12px; background-color: #FFFFFF ;" 
+							type="text" placeholder="Nhập Email của bạn"> 
+							</span>
+							<button href="#" class="mail-btn">ẤN GỬI</button>
+							<div style="font-family: sans-serif; font-style: italic; 
+								font-size: 10px; position: absolute; display: none;">
+								Đã gửi Email, vui lòng đợi xác nhận!
+							</div>
+						</div>
+						<div style="padding-bottom: 15px; border-bottom: 0.1px solid #BABABA;
+						font-weight: 300;">PHƯƠNG THỨC THANH TOÁN</div>
+						<img src="/G2_Web/source/image 5.png" style="margin-top: 26px;">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+</footer>
+
+</body>
+</html>
