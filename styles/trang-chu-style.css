@@ -1,0 +1,364 @@
+/*-------------------trang-chu-------------------*/
+    /*-------------------section slider-------------------*/
+    .content_zone{
+        display: block;
+        margin: 10vw;
+        padding: 0;
+        top: 0;
+        left: 0;
+    }
+    .section-1_slider{
+        padding-top: 0;
+        margin: 0 10vw;
+        width: 80vw;
+        height: 40vw;
+        position: flex;
+        z-index: 0;
+    }
+    .slider{
+        margin-left: 0;
+        position: flex;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .slider .slide{
+        display: flex;
+    }
+    .slider .slide img{
+        width: 80vw;
+        height: 40vw;
+        object-fit: cover;
+    }
+    .slider-img{
+        width: 100%;
+    }
+    .nav-slider{
+        display: none;
+        position: absolute;
+        z-index: 2;
+        align-items: center;
+        /* justify-content: space-between; */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .prev-btn, .next-btn{
+        z-index: 2;
+        font-size: 2em;
+        color: #222;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .section-1_slider:hover > .nav-slider{
+        opacity: 1;
+    }
+    .slider-button{
+        z-index: 2;
+        display: flex;
+        margin-top: 37.7%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .slider-button .dot{
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.15);
+    }
+    .slider-button .dot_active{
+        background: #FFFFFF;
+    }
+
+    /*-------------------section ban chay-------------------*/
+    /*-------------------section loai hang-------------------*/
+    /*-------------------section tin tuc-------------------*/
+    
+    h1 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin-top: 8rem;
+        margin-bottom: 6rem;
+    }
+    h1 a{
+        color: var(--black);
+    }
+    h2 {
+        font-size: 2rem;
+        color: var(--black);
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--black)
+    }
+    h5 {
+        font-size: 1rem;
+        font-weight: lighter;
+        color: #767676;
+    }
+    #section-best_seller, #section-gallery {
+        text-align: center;
+        padding-left: 8vw;
+        padding-right: 8vw;
+        display: block;
+    }
+    #section-gallery{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #section-news{
+        display: block;
+        height: fit-content;
+        width: 90vw;
+        text-align: center;
+        margin: auto;
+    }
+    h1{
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+    .card-container, .gallery-container, .news-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-container, .news-container {
+        gap: 3.7rem;
+    }
+    .card-container{
+        margin-bottom: 20px;
+    }
+    .gallery-container {
+        gap: 3rem;
+    }
+    .news-container{
+        height: fit-content;
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+        width: 100%;
+        height: fit-content;
+        cursor: pointer;
+        transition: all linear 0.4s;
+    }
+    .card-link{
+        width: 21%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #f2f2f2;
+    }
+    .news {
+        width: 20%;
+        height: fit-content;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .news p{
+        font-weight: 300;
+    }
+    .news .news-img {
+        width: 100%;
+        height: 90%;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .news-img img {
+        width: 100%;
+        object-fit: cover;
+        transition: all 1.2s ease;
+    }
+    .news:hover .news-img img{
+        transform: scale(1.1);
+    }
+    .news:hover .news-heading{
+        color: #aa8004;
+    }
+    .news-heading {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+        transition: all 0.2s;
+    }
+    .news-short_content{
+        font-weight: lighter;
+        opacity: 0.8;
+    }
+    /*-------------------other-things-------------------*/
+    .card .card-img {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .card-img img {
+        width: 100%;
+    
+        transition: all linear 0.4s;
+    }
+    .card-img .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    
+    .card:hover .card-img img {
+        opacity: 0;
+    }
+    .card:hover .card-img .hover-img {
+        opacity: 1;
+    }
+    .card-more_imgs {
+        width: 100%;
+        margin: 1.2rem 0;
+    }
+    
+    .card-more_imgs img {
+        width: 3rem;
+        display: inline-block;
+    }
+    .card-price {
+        transition: all linear 0.4s;
+    }
+    .card .card-action{
+        width: 100%;
+    }
+    .card .card-action .card-action-button {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--black);
+        width: 90%;
+        padding: 0.8rem;
+        padding-bottom: 1.3rem;
+        stroke: solid 0.1rem var(--black);
+        background: none;
+    }
+    
+    .card-action-button{
+        margin-top: 8px;
+        /* visibility: hidden; */
+        opacity: 0;
+        transition: 0.4s;
+    }
+    
+    .card:hover .card-action-button {
+        margin-top: -40px;
+        /* visibility: visible; */
+        opacity: 1;
+    }
+    
+    .card:hover .card-price {
+        opacity: 0;
+    }
+    
+    .card .card-action .card-action-button:hover{
+        background-color: var(--black);
+        color: var(--white);
+    }
+    
+    .btn-xem_them_1 {
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.2rem;
+        color: var(--white);
+        margin-top: 10px;
+        padding: 1.2rem 7rem 2rem;
+        background: var(--black);
+        transition: all linear 0.4s;
+        border: none;
+    }
+    
+    .btn-xem_them_1:hover {
+        background-color: var(--orange);
+        color: var(--black);
+    }
+    
+    .gallery {
+        width: 30%;
+        height: 420px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        transition: all 1.2s ease;
+    }
+    .gallery::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0, 0.7), rgba(255, 255, 255, 0));
+        z-index: -2;
+    }
+    .gallery img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+        
+    }
+    .gallery:hover {
+        transform: scale(1.1);
+    }
+    .gallery .info {
+        width: fit-content;
+        padding-left: 2rem;
+        padding-bottom: 20%;
+        z-index: 1;
+        position: relative;
+        text-align: left;
+        color: var(--white);
+    }
+    
+    .info .gallery-name {
+        font-weight: lighter;
+        margin: 0;
+        letter-spacing: 2.5px;
+    }
+    .info p {
+        margin-bottom: 2.5rem;
+        font-size: 2rem;
+        font-weight: lighter;
+        opacity: 0.7;
+    }
+    .btn-xem_them_2 {
+        font-size: 1rem;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        width: 80%;
+        z-index: 2;
+        margin: 0 10% 10%;
+        color: var(--white);
+        padding: 0.8rem 4rem 1.2rem;
+        background: var(--black);
+        transition: all linear 0.1s;
+        border: none;
+    }
+    .btn-xem_them_2:hover {
+        background-color: var(--orange);
+        color: var(--black);
+    }
+    .btn-xem_them_2:active {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+
+/*-------------------animation-------------------*/
