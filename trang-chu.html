@@ -64,17 +64,14 @@
 					</a>
 				</li>
 			</ul>
-            
-			
-			
         </div>
     </div>
     <nav class="container_nav">
         <ul>
-            <li>
+            <li title="Trang chủ">
 				<a href="/G2_Web/trang-chu.html" title="Trang chủ">Trang chủ</a>
 			</li>
-            <li>
+            <li title="Chelsea Boots">
 				<a href="/G2_Web/tim-kiem.html" class="nav-link" title="Chelsea boots">Chelsea boots 
 					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
 				</a>
@@ -90,7 +87,7 @@
 					</li>
 				</ul>
             </li>
-            <li>
+            <li title="Combat Boots">
                 <a href="/G2_Web/tim-kiem.html" title="Combat boots">Combat boots
 					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
 				</a>
@@ -109,7 +106,7 @@
 					</li>
 				</ul>
             </li>
-            <li>
+            <li title="Office Shoes">
                 <a href="/G2_Web/tim-kiem.html" title="Office shoes">Office shoes
 					<i class="fa fa-angle-down" data-toggle="dropdown"></i>
 				</a>
@@ -128,16 +125,15 @@
 					</li>
 				</ul>
             </li>
-            <li>
+            <li title="Sneaker">
                 <a href="/G2_Web/tim-kiem.html" title="Sneaker">Sneaker</a>
             </li>
-			<li>
+			<li title="Cửa hàng">
                 <a href="/G2_Web/cua-hang.html" title="Cửa hàng">Cửa hàng</a>
             </li>
-			<li>
+			<li title="Blog">
                 <a href="/G2_Web/blog.html" title="Blog">Blog</a>
             </li>
-
         </ul>
     </nav>
 </header>
@@ -145,58 +141,45 @@
 <!------------CONTENT------------->
 	<!------------Slider------------->
 <section class="section-1_slider">	
-	<div class="nav-slider">
-		<span class="material-symbols-outlined prev-btn"> chevron_left </span>
-		<span class="material-symbols-outlined next-btn"> chevron_right </span>
-	</div>
-
 	<div class="slider">
-		<div class="slider-button">
-			<div class="dot" aria-label="Page dot 1"></div>
-			<div class="dot" aria-label="Page dot 2"></div>
-			<div class="dot" aria-label="Page dot 3"></div>
-			<div class="dot" aria-label="Page dot 4"></div>
-			<div class="dot" aria-label="Page dot 5"></div>
-		</div>
 		<div class="slide">
-			<img src="/G2_Web/source/slider/1.png" alt="">
+			<img src="/G2_Web/source/slider/1.png" alt="" id="slider-img">
 		</div> 
-		<div class="slide">
-			<img src="/G2_Web/source/slider/2.jpg" alt="" class="slider-img">
-		</div> 
-		<div class="slide">
-			<img src="/G2_Web/source/slider/3.jpg" alt="">
-		</div> 
-		<div class="slide">
-			<img src="/G2_Web/source/slider/4.jpg" alt="">
-		</div> 
-		<div class="slide">
-			<img src="/G2_Web/source/slider/5.jpg" alt="">
-		</div> 
-
+	</div>
+	<div class="nav-slider">
+		<span class="material-symbols-outlined prev-btn" onclick="prev()"> chevron_left </span>
+		<span class="material-symbols-outlined next-btn" onclick="next()"> chevron_right </span>
+	</div>
+	<div class="slider-button">
+		<div class="dot active" aria-label="Page dot 1"></div>
+		<div class="dot" aria-label="Page dot 2"></div>
+		<div class="dot" aria-label="Page dot 3"></div>
+		<div class="dot" aria-label="Page dot 4"></div>
+		<div class="dot" aria-label="Page dot 5"></div>
 	</div>
 
-
-	<script type="text/javascript">
-		const nextBtn = document.querySelector(".next-btn");
-		const prevBtn = document.querySelector(".prev-btn");
-		const slides = document.querySelectorAll(".slide");
-		const slideIcons = document.querySelectorAll(".dot");
-		const numberOfSildes = slides.length;
-		
-		var slideNumber = 0;
-
-		//next
-		nextBtn.addEventListener("click",() =>{
-			slideNumber++;
-
-			if(slideNumber > (numberOfSildes-1)){
-				slideNumber = 0;
-			}
-
-			slides[slideNumber].classList.add("active");
-			slidesIcons[slideNumber].classList.add("active");
-		});
+	<script>
+		// Tạo list banner
+	var arr_hinh=[
+		"source/slider/1.png",
+		"source/slider/2.jpg",
+		"source/slider/3.jpg",
+		"source/slider/4.jpg",
+		"source/slider/5.jpg",
+	]
+	var slideNumber = 0;
+	// Chức năng lùi
+	function prev(){
+		slideNumber--;
+		if (slideNumber<0) slideNumber=0;
+		images.src=arr_hinh[slideNumber]-1;
+	}
+	// Chức năng tiến
+	function next(){
+		slideNumber++;
+		if (slideNumber==arr_hinh.length) slideNumber=0;
+		document.getElementById("slider-img").src=arr_hinh[slideNumber];
+	}
 	</script>
 
 </section>
@@ -405,7 +388,9 @@
 			</div>
 		</a>
 	</div>
-	<a href="/G2_Web/tim-kiem.html" style="width: 30%;" class="btn-xem_them_1">XEM THÊM</a>
+	<a href="/G2_Web/tim-kiem.html" style="width: 30%;" class="btn-xem_them_1">XEM THÊM
+		<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+	</a>
 </section> 
 	<!-----------Loại hàng------------>
 <section id="section-gallery">
@@ -448,26 +433,29 @@
 		</div>
 		<div class="news">
 			<div class="news-img">
-				<img src="/G2_Web/source/news-1.jpg">
+				<img src="/G2_Web/source/news-2.jpg">
 			</div>
-			<h5 class="news-heading">Nhà tài trợ chính thức cho sự kiện Thời trang Biluxury</h5>
-			<p class="news-short_content">Với G2 chúng tôi, luôn luôn sẵn sàng chào đón, hợp tác với các doanh nghiệp với thông điệp: ”Hợp tác cùng nhau, phát triển cùng nhau”...</p>
+			<h5 class="news-heading">Chính thức ra mắt cuốn sách “Gã mê giày”</h5>
+			<p class="news-short_content">Tựa của cuốn sách “Gã mê giày” chính là những điều anh muốn gửi gắm tới người đọc. Từ một dân kỹ thuật chính hiệu vì tình yêu với đôi giày da mà anh quyết tâm dấn thân vào kinh doanh...</p>
 		</div>
 		<div class="news">
 			<div class="news-img">
-				<img src="/G2_Web/source/news-1.jpg">
+				<img src="/G2_Web/source/news-3.jpg">
 			</div>
-			<h5 class="news-heading">Nhà tài trợ chính thức cho sự kiện Thời trang Biluxury</h5>
-			<p class="news-short_content">Với G2 chúng tôi, luôn luôn sẵn sàng chào đón, hợp tác với các doanh nghiệp với thông điệp: ”Hợp tác cùng nhau, phát triển cùng nhau”...</p>
+			<h5 class="news-heading">Thắt dây giày đơn giản với hai cách phổ biến sau</h5>
+			<p class="news-short_content">Những tiểu tiết nhỏ sẽ giúp thể hiện sự tinh tế của một người đàn ông. Và để có thể mang một đôi giày thì việc thắt dây giày đúng cách là điều quan trọng nhất...</p>
 		</div>
 		<div class="news">
 			<div class="news-img">
-				<img src="/G2_Web/source/news-1.jpg">
+				<img src="/G2_Web/source/news-4.jpg">
 			</div>
-			<h5 class="news-heading">Nhà tài trợ chính thức cho sự kiện Thời trang Biluxury</h5>
-			<p class="news-short_content">Với G2 chúng tôi, luôn luôn sẵn sàng chào đón, hợp tác với các doanh nghiệp với thông điệp: ”Hợp tác cùng nhau, phát triển cùng nhau”...</p>
+			<h5 class="news-heading">G2 STORE - Dòng Sneaker đầu tiên chính thức ra mắt</h5>
+			<p class="news-short_content">Hẳn ai cũng biết đến G2 STORE là một thương hiệu giày da Việt Nam. Được thiết kế và sản xuất tại Việt Nam, G2 STORE chính thức bước vào thị trường giày da ...</p>
 		</div>
 	</div>
+	<a href="/G2_Web/blog.html" style="width: 30%;" class="btn-xem_them_1">XEM THÊM
+		<i class="fa fa-angle-down" data-toggle="dropdown"></i>
+	</a>
 </section>
 	
 </div>
