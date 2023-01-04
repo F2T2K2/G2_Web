@@ -171,8 +171,8 @@
 	// Chức năng lùi
 	function prev(){
 		slideNumber--;
-		if (slideNumber<0) slideNumber=0;
-		images.src=arr_hinh[slideNumber]-1;
+		if (slideNumber<-0) slideNumber=4;
+		document.getElementById("slider-img").src=arr_hinh[slideNumber]-1;
 	}
 	// Chức năng tiến
 	function next(){
