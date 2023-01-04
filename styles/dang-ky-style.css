@@ -39,6 +39,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -119,6 +120,7 @@ a:hover {
     color: #ffc000;
 }
 
+
 .btn-register-login {
     display: block;
     margin-bottom: 20px;
@@ -128,4 +130,8 @@ a:hover {
     color: #000;
     margin-top: 15px;
     font-family: "SVN-Gotham Light";
+}
+.btn-blues:hover {
+    background-color: var(--orange);
+    color: var(--black);
 }

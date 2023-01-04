@@ -9,36 +9,50 @@
     }
     .section-1_slider{
         padding-top: 0;
-        margin: 0 10vw;
+        margin: 30px 10vw;
         width: 80vw;
         height: 40vw;
-        position: flex;
+        position: relative;
+        display: flex;
         z-index: 0;
     }
     .slider{
         margin-left: 0;
-        position: flex;
-        width: 100%;
+        position: relative;
+        display: flex;
         height: 100%;
         overflow: hidden;
+        left: 0vw;
     }
     .slider .slide{
-        display: flex;
+        display:inline-block;
+        position: relative;
+        width: fit-content;
+    }
+    .slider::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 10%;
+        background: linear-gradient(to top, rgba(0,0,0, 0.4), rgba(255, 255, 255, 0));
+        z-index: 1;
     }
     .slider .slide img{
         width: 80vw;
         height: 40vw;
         object-fit: cover;
     }
-    .slider-img{
-        width: 100%;
-    }
     .nav-slider{
-        display: none;
+        display: flex;
         position: absolute;
-        z-index: 2;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
         align-items: center;
-        /* justify-content: space-between; */
+        justify-content: space-between;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -48,6 +62,8 @@
         color: #222;
         background: rgba(255, 255, 255, 0.8);
         padding: 10px;
+        top: 50%;
+        border-radius: 2px;
         cursor: pointer;
     }
     
@@ -56,10 +72,10 @@
     }
     .slider-button{
         z-index: 2;
-        display: flex;
-        margin-top: 37.7%;
+        display: none;
         position: absolute;
         left: 50%;
+        bottom: 1%;
         transform: translateX(-50%);
     }
     .slider-button .dot{
@@ -71,7 +87,10 @@
         cursor: pointer;
         box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.15);
     }
-    .slider-button .dot_active{
+    .slider-button .dot:hover{
+        cursor: pointer;
+    }
+    .slider-button .active{
         background: #FFFFFF;
     }
 
@@ -270,10 +289,10 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 2.2rem;
+        font-size: 200%;
         color: var(--white);
         margin-top: 10px;
-        padding: 1.2rem 7rem 2rem;
+        padding: 1.2rem 5% 2rem;
         background: var(--black);
         transition: all linear 0.4s;
         border: none;

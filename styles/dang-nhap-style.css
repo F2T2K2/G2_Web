@@ -38,7 +38,10 @@ a {
 .text-center {
     text-align: center;
 }
-
+.btn-blues:hover{
+    background-color: var(--orange);
+    color: var(--black);
+}
 
 /* social logo */
 

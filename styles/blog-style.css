@@ -73,7 +73,20 @@
         margin-top: 10px;
     }
     
-    h2,
+    .cover-container{
+        height: 100px;
+        align-items: center;
+    }
+    .cover-container img{
+        width: 100%;
+    }
+    .cover-title{
+        width: 100%;
+    }
+    .cover-title h1{
+        text-align: center;
+        margin-top: 30px;
+    }
     .h2 {
         color: #fff;
         letter-spacing: .01em;
@@ -103,7 +116,10 @@
     
     section {
         display: block;
+        width: 100vw;
+        position: relative;
     }
+   
     
     .list-blog-page .evo-list-blogs .blog-item:nth-child(3n+1) {
         clear: left;

@@ -245,6 +245,10 @@ h5 {
     font-size: 16px;
     font-weight: 700;
 }
+#list a{
+    width: 25vw;
+    text-align: center;
+}
 #list .kq{
     width: 25vw;
     margin: 10px 6px 20px 6px;

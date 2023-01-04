@@ -368,7 +368,6 @@ input[type="radio"]:checked + label span {
     line-height: 1.42857143em;
     word-wrap: break-word;
     word-break: break-word;
-    color: #717171;
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 1em;
@@ -384,7 +383,6 @@ input[type="radio"]:checked + label span {
     line-height: 1.42857143em;
     word-wrap: break-word;
     word-break: break-word;
-    color: #717171;
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 1em;
@@ -398,25 +396,42 @@ input[type="radio"]:checked + label span {
 }
 
 .product-thumbnail__wrapper{
-    font-family: SVN-Gotham,sans-serif;
+    font-family: 'SVN-Gotham',sans-serif;
     line-height: 1.42857143em;
     word-wrap: break-word;
     word-break: break-word;
-    color: #717171;
     border-collapse: collapse;
     border-spacing: 0;
     font-size: 1em;
     font-weight: normal;
     text-align: left;
     width: 100%;
+    z-index: 3;
     height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
+img{
+    font-family: 'SVN-Gotham',sans-serif;
+    line-height: 1.42857143em;
+    word-wrap: break-word;
+    word-break: break-word;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    font-weight: normal;
+    text-align: left;
+    width: 100%;
+    z-index: 3;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
 .product-thumbnail__quantity{
-    font-family: SVN-Gotham,sans-serif;
+    font-family: 'SVN-Gotham',sans-serif;
     word-wrap: break-word;
     word-break: break-word;
     border-collapse: collapse;
@@ -737,9 +752,8 @@ input[type="radio"]:checked + label span {
     width: 155px;
     height: 40px;
     margin: 20px 10px 20px 35px;
-    padding: 7px 45px 5px 45px;
+    padding: 10px 0px 0px 45px;
     background-color: none;
-    padding: 7px 20px px 5px 20px;
 }
 
 .button-back {
@@ -752,10 +766,11 @@ input[type="radio"]:checked + label span {
 }
 
 .button-exit {
-    font-size: 18px;
+    font-size: 14px;
     font-family: SVN-Gotham, sans-serif;
     text-align: center;
     justify-content: center;
     color: black;
     text-decoration: none;
+    padding: 0;
 }
